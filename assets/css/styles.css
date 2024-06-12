@@ -215,7 +215,9 @@ img {
   z-index: -1;
 }
 /* Active link */
-
+.active-link{
+  color: var(--first-color);
+}
 /*=============== HOME ===============*/
 .home-container{
   padding-top: 2.5rem;
@@ -487,12 +489,215 @@ img {
   background-color: hsl(228, 4%, 35%);
 }
 /*=============== SCROLL UP ===============*/
-
+.scroll-up{
+  position: fixed;
+  right: 1rem;
+  bottom: -50%;
+  background-color: var(--container-color);
+  color: var(--title-color);
+  box-shadow: 0 12px 24px hsla(228, 48%, 4%, 0.5);
+  display: inline-flex;
+  padding: 6px;
+  font-size: 1.25rem;
+  z-index: var(--z-tooltip);
+  transition: bottom .4s, transform .4s;
+}
+.scroll-up:hover{
+  transform: translateY(-.5rem);
+}
 /* Show Scroll Up */
-
+.show-scroll{
+  bottom: 3rem;
+}
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
-
+@media screen and (max-width: 320px) {
+  .container{
+    margin-inline: 1rem;
+  }
+  .home-title{
+    font-size: 2rem;
+  }
+  .home-button{
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+  .shop-container{
+    grid-template-columns: 200px;
+    justify-content: center;
+  }
+  .footer-content{
+    grid-template-columns: max-content;
+  }
+}
 /* For medium devices */
-
+@media screen and (min-width: 576px) {
+  .home-container,
+  .news-container{
+    grid-template-columns: 400px;
+    justify-content: center;
+  }
+  .footer-content{
+    grid-template-columns: repeat(3, max-content);
+  }
+}
+@media screen and (min-width: 768px){
+  .nav-menu{
+    width: 50%;
+  }
+  .news-content{
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: rem;
+  }
+  .news-card:nth-child(even){
+    transform: translateY(10rem);
+  }
+  .shop-container{
+    grid-template-columns: repeat(3,160px);
+    justify-content: center;
+  }
+  .footer-container{
+    grid-template-columns: repeat(2, max-content);
+    justify-content: space-between;
+  }
+}
 /* For large devices */
+@media screen and (min-width: 1150px) {
+  .container{
+    margin-inline: auto;
+  }
+  .section{
+    padding-block:  7rem 2 rem;
+  }
+  .section-title{
+    margin-bottom: 1.5rem;
+  }
+  .nav{
+    height: calc(var(--header-height) + 2rem);
+  }
+  .nav-toogle,
+  .nav-close{
+    display: none;
+  }
+  .nav-logo i{
+    font-size: 1.5rem;
+  }
+  .nav-menu{
+    width: initial;
+  }
+  .nav-list{
+    flex-direction: row;
+    column-gap: 3.5rem;
+  }
+  .nav-actions{
+    font-size: 1.5rem;
+    column-gap: 1rem;
+  }
+  .home-container{
+    grid-template-columns:  480px 535px;
+    align-items: center;
+    column-gap: 4rem;
+    padding-top: 4rem;
+  }
+  .home-img{
+    width: 400px;
+  }
+  .home-data{
+    text-align: initial;
+  }
+  .home-description{
+    margin-bottom: 3rem;
+  }
+  .home-button{
+    justify-content: initial;
+    column-gap: 1.5rem;
+  }
+  .news-container{
+    grid-template-columns: 412px 490px;
+    align-items: center;
+    column-gap: 7.5rem;
+  }
+  .news-data,
+  .news-data .section-title{
+    text-align: initial;
+  }
+  .news-content{
+    row-gap: 8.5rem;
+  }
+  .news-title{
+    font-size: var(--h3-font-size);
+  }
+  .shop-container{
+    grid-template-columns: repeat(3, 240px);
+    gap: 8.5rem 4rem;
+    padding-top: 7.5rem;
+  }
+  .shop-card{
+    padding: 10.5rem 1.5rem 2rem;
+    border-radius: 1.5rem;
+  }
+  .shop-img{
+    width: 210px;
+    top: -5.5rem;
+  }
+  .shop-title{
+    font-size: var(--h3-font-size);
+  }
+  .shop-price{
+    font-size: var(--h2-font-size);
+  }
+  .shop-button{
+    right: 1.5rem;
+    bottom: 2rem;
+    font-size: 1.5rem;
+  }
+  .care-container{
+    grid-template-columns: 480px 385px;
+    align-items: center;
+    column-gap: 8rem;
+    padding-top: 3rem;
+  }
+  .care-img{
+    width: 400px;
+  }
+  .care-list{
+    row-gap: 1.5rem;
+  }
+  .contact-container{
+    grid-template-columns: 280px 480px;
+    justify-content: center;
+    align-items: center;
+    column-gap: 8rem;
+    padding-block: 3rem;
+  }
+  .contact-content{
+    order: -1;
+    text-align: initial;
+    row-gap: 2.5rem;
+  }
+  .contact-social{
+    justify-content: initial;
+  }
+  .contact-img{
+    width: 400px;
+  }
+  .footer .logo{
+    margin-bottom: 1.5rem;
+  }
+  .footer .logo i{
+    font-size: 2rem;
+  }
+  .footer-content{
+    column-gap: 5.5rem;
+  }
+  .footer-title{
+    font-size: var(--h3-font-size);
+    margin-bottom: 1.5rem;
+  }
+  .footer-social{
+    column-gap: 1rem;
+  }
+  .footer-copy{
+    margin-top: 7.5rem;
+  }
+}
