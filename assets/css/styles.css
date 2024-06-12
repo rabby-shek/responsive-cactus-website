@@ -320,7 +320,52 @@ img {
   transform: translateY(-.5rem);
 }
 /*=============== SHOP ===============*/
-
+.shop-container{
+  padding-top: 6rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 6rem 1.5rem;
+}
+.shop-card{
+  position: relative;
+  background:  var(--gradient-card);
+  padding: 9rem .75rem 1.5rem .75rem;
+  border: 2px solid var(--first-color);
+  border-radius: 1.5rem;
+}
+.shop-img{
+  position: absolute;
+  top: -4.5rem;
+  left: 0;
+  right: 0;
+  width: 130px;
+  margin: 0 auto;
+  transition: transform .4s;
+}
+.shop-title{
+  font-size: var(--small-font-size);
+  font-weight: var(--font-semi-bold);
+  margin-bottom: .5rem;
+}
+.shop-price{
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+}
+.shop-button{
+  position: absolute;
+  right: .75rem;
+  bottom: .75rem;
+  outline: none;
+  border: none;
+  background-color: var(--white-color);
+  padding: 6px;
+  border-radius: 50%;
+  font-size: 1.25rem;
+  display: grid;
+  cursor: pointer;
+}
+.shop-card:hover .shop-img{
+  transform: translateY(-.5rem);
+}
 /*=============== CARE ===============*/
 
 /*=============== CONTACT ===============*/
